@@ -1,1 +1,77 @@
 
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cidadania Digital e IA</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>🧠 Cidadania Digital & IA</h1>
+
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#deepfakes">Deepfakes</a>
+    <a href="#quiz">Quiz</a>
+  </nav>
+
+  <button id="modo">🌙 Modo</button>
+</header>
+
+<section class="hero">
+  <h2>IA, Deepfakes e o Futuro da Informação</h2>
+  <p>Aprenda a identificar fake news e se proteger na internet.</p>
+</section>
+
+<main>
+
+<section id="sobre" class="card-section">
+  <h2>📡 O que é Cidadania Digital?</h2>
+  <p>É o uso consciente da internet com ética, segurança e responsabilidade.</p>
+</section>
+
+<section id="deepfakes" class="card-section">
+
+  <h2>🎭 Deepfakes</h2>
+
+  <div class="cards">
+    <div class="card">⚠️ Podem enganar pessoas</div>
+    <div class="card">🤖 Criados por IA</div>
+    <div class="card">📱 Espalham fake news</div>
+  </div>
+
+</section>
+
+<section id="quiz" class="quiz">
+
+  <h2>🧪 Quiz Interativo</h2>
+
+  <div class="barra">
+    <div id="progresso"></div>
+  </div>
+
+  <p id="pergunta">Carregando...</p>
+
+  <div class="botoes">
+    <button onclick="responder(true)">✔ Verdadeiro</button>
+    <button onclick="responder(false)">✖ Falso</button>
+  </div>
+
+  <p id="feedback"></p>
+  <p>Pontos: <span id="pontos">0</span></p>
+
+</section>
+
+</main>
+
+<footer>
+  <p>#cidadaniadigital2026</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
