@@ -1,168 +1,93 @@
-
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Cidadania Digital e IA</title>
-
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cidadania Digital e IA</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+  <header>
+    <h1>🧠 Cidadania Digital & IA</h1>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#deepfakes">Deepfakes</a>
+      <a href="#quiz">Quiz</a>
+      <a href="#form">Formulário</a>
+    </nav>
 
-<header>
-    <h1>Cidadania Digital e Inteligência Artificial</h1>
+    <button id="modo">🌙 Modo</button>
+  </header>
 
-    <p>
-        Deepfakes, Fake News e Segurança Digital
-    </p>
+  <section class="hero">
+    <h2>O impacto da IA na informação</h2>
+    <p>Deepfakes e fake news estão mudando a forma como vemos o mundo.</p>
+    <button onclick="scrollToSection('sobre')">Explorar</button>
+  </section>
 
-    <button id="darkModeBtn">
-        🌙 Modo Escuro
-    </button>
-</header>
+  <main>
 
-<nav>
-    <a href="#deepfakes">Deepfakes</a>
-    <a href="#fakeNews">Fake News</a>
-    <a href="#dicas">Dicas</a>
-    <a href="#quiz">Quiz</a>
-</nav>
+    <section id="sobre">
+      <h2>📡 O que é Cidadania Digital?</h2>
+      <p>
+        É o uso consciente, ético e seguro da tecnologia e da internet.
+      </p>
+    </section>
 
-<main>
+    <section id="deepfakes">
+      <h2>🎭 Deepfakes</h2>
 
-<section class="hero">
-    <h2>
-        Aprenda a identificar conteúdos manipulados por IA
-    </h2>
-
-    <p>
-        A cidadania digital ajuda a combater golpes,
-        deepfakes e desinformação.
-    </p>
-</section>
-
-<section id="deepfakes" class="card">
-
-    <h2>🎭 O que são Deepfakes?</h2>
-
-    <p>
-        Deepfakes são vídeos, imagens e áudios
-        criados por Inteligência Artificial capazes
-        de imitar pessoas reais.
-    </p>
-
-    <button onclick="mostrarAlerta()">
-        Ver Risco
-    </button>
-
-</section>
-
-<section id="fakeNews" class="card">
-
-    <h2>📰 Fake News Automatizadas</h2>
-
-    <p>
-        Sistemas de IA podem gerar notícias falsas
-        em grande escala.
-    </p>
-
-    <div class="estatisticas">
-
-        <div>
-            <h3 id="contador1">0</h3>
-            <p>Conteúdos analisados</p>
+      <div class="cards">
+        <div class="card">
+          <h3>O que são?</h3>
+          <p>Vídeos ou imagens manipuladas por IA.</p>
         </div>
 
-        <div>
-            <h3 id="contador2">0</h3>
-            <p>Casos detectados</p>
+        <div class="card">
+          <h3>Perigos</h3>
+          <p>Podem enganar pessoas e espalhar fake news.</p>
         </div>
 
-        <div>
-            <h3 id="contador3">0</h3>
-            <p>Usuários conscientizados</p>
+        <div class="card">
+          <h3>Como identificar?</h3>
+          <p>Observe erros de rosto, voz e contexto estranho.</p>
         </div>
+      </div>
+    </section>
 
-    </div>
+    <section id="quiz">
+      <h2>🧪 Quiz Interativo</h2>
 
-</section>
+      <div class="quiz-box">
+        <p>Deepfake é sempre real?</p>
+        <button onclick="responder(false)">Sim</button>
+        <button onclick="responder(true)">Não</button>
 
-<section id="dicas" class="card">
+        <p id="resultado"></p>
+        <p>Pontos: <span id="pontos">0</span></p>
+      </div>
+    </section>
 
-    <h2>🛡️ Como se proteger?</h2>
+    <section id="form">
+      <h2>🛡️ Compromisso Digital</h2>
 
-    <ul>
+      <form id="formulario">
+        <input type="text" id="nome" placeholder="Seu nome">
+        <input type="email" id="email" placeholder="Seu email">
 
-        <li>Verifique a fonte.</li>
+        <button type="submit">Enviar</button>
+      </form>
 
-        <li>Pesquise em sites confiáveis.</li>
+      <p id="msg"></p>
+    </section>
 
-        <li>Não compartilhe sem conferir.</li>
+  </main>
 
-        <li>Observe erros em vídeos.</li>
+  <footer>
+    <p>#cidadaniadigital2026</p>
+  </footer>
 
-        <li>Questione informações muito alarmistas.</li>
-
-    </ul>
-
-</section>
-
-<section id="quiz" class="card">
-
-    <h2>🎯 Quiz</h2>
-
-    <p>
-        Você recebeu uma notícia sem fonte.
-        O que fazer?
-    </p>
-
-    <button onclick="respostaErrada()">
-        Compartilhar imediatamente
-    </button>
-
-    <button onclick="respostaCorreta()">
-        Verificar antes
-    </button>
-
-    <h3 id="resultadoQuiz"></h3>
-
-</section>
-
-<section class="card">
-
-    <h2>📩 Compromisso Digital</h2>
-
-    <form id="formulario">
-
-        <input
-        type="text"
-        id="nome"
-        placeholder="Digite seu nome">
-
-        <button type="submit">
-            Assinar
-        </button>
-
-    </form>
-
-    <p id="mensagem"></p>
-
-</section>
-
-</main>
-
-<footer>
-
-    <p>
-        Projeto Educação Digital e IA - 2026
-    </p>
-
-</footer>
-
-<script src="js/script.js"></script>
-
+  <script src="js/script.js"></script>
 </body>
 </html>
